@@ -1,6 +1,7 @@
 import torch as t
 import torch.nn as nn
-from torchvision.models.mobilenetv2 import InvertedResidual, ConvBNReLU, ConvNormActivation
+from torchvision.models.mobilenetv2 import InvertedResidual
+from torchvision.ops.misc import ConvNormActivation
 
 def inflate_weights_conv2d(layer_3d, layer_2d, reduce_channel):
     if layer_3d.weight is not None:
